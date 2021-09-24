@@ -34,7 +34,7 @@ function suppliersData() {
             );
         },
         deleteSupplier(supplierId) {
-                axios.delete(`${baseURL}/api/suppliers/${supplierId}/delete`)
+                axios.post(`${baseURL}/api/suppliers/${supplierId}/delete`)
                 .then(
                     (response) => {
                         console.log(response.status);
